@@ -213,7 +213,12 @@ const evens = (array) = array.filter((num) => num % 2 === 0);
 //
 // Make sure to use arrow functions combined with the map method.
 
-// REPLACE THIS WITH YOUR CODE
+function formalGreeting(arr){
+ let newArr = arr.map((item)=>`Hello, ${item}`);
+ return newArr;
+}
+
+console.log(formalGreeting(['steve','bob']));
 
 /// /////// PROBLEM 10 //////////
 
@@ -269,8 +274,11 @@ const orders = [
   Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
   Example: if tax is 0.07, the price afterTax could be calculated like this: afterTax = price * 1.07)
 */
+///a high order function is a callback function
 
-let orderTotals; // Code here
+let orderTotals = [];
+orders.forEach((order)=> orderTotals.push(order.price*(order.tax+1)))
+console.log(orderTotals);
 
 /// /////// PROBLEM 13 //////////
 
