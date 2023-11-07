@@ -27,9 +27,9 @@
   Then invoke the callback function, passing in the first element in the array as its argument.
   Return the result of invoking the callback.
 */
-
-// Code Here
-
+function first(arr,callback){
+  return callback(arr[0]);
+}
 // Do not edit the code below.
 const names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -38,6 +38,7 @@ first(names, function (firstName) {
   console.log('The first name in names is ' + firstName);
   return firstName;
 });
+
 // Do not edit the code above.
 
 ////////// PROBLEM 2 //////////
@@ -48,8 +49,9 @@ first(names, function (firstName) {
   Return the result of invoking the callback.
 */
 
-//Code Here
-
+function last (arr,callback){
+  return callback(arr[arr.length-1]);
+}
 // Do not edit the code below.
 // Your function is called here
 last(names, (lastName) => {
