@@ -67,8 +67,9 @@ last(names, (lastName) => {
   Invoke the callback, passing in the product of the two numbers multiplied as the argument.
 */
 
-//Code Here
-
+function multiply(num1, num2, callback){
+  return callback(num1*num2);
+}
 // Do not edit the code below.
 // Your function is called here
 multiply(4, 3, function (answer) {
@@ -85,7 +86,13 @@ multiply(4, 3, function (answer) {
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here
+function contains(array, name, callback){
+  if (array.includes(name)){
+  callback(true); console.log()
+} else {
+  callback(false);
+}
+}
 
 // Do not edit the code below.
 // Your function is called here
@@ -105,7 +112,12 @@ contains(names, 'Colt', (result) => {
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here
+function each(array,callback){
+  for (i=0; i<array.length; i++){
+  callback(array[i], i);
+  };
+  return callback;
+}
 
 // Do not edit the code below.
 // Your function is called here
@@ -122,7 +134,14 @@ each(names, (item, index) => {
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-// Code here
+function getUserById(users, id, callback) {
+  for (const user of users){
+    if (user.id===id){
+    callback(user);
+    break;
+    }
+  }
+}
 
 // Do not edit the code below.
 const users = [
@@ -172,7 +191,7 @@ getUserById(users, '16t', (user) => {
 // Make sure to use an arrow function.
 // You should not use a for loop, but should use the filter method instead.
 
-// REPLACE THIS WITH YOUR CODE
+const evens = (array) = array.filter((num) => num % 2 === 0);
 
 /// /////// PROBLEM 8 //////////
 
