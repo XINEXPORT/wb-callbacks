@@ -297,7 +297,8 @@ const exampleMenuItems = [
 // Create a function called sortMenuItems which takes in an array of objects like the one above
 // and sorts the array by price from smallest to largest. It should return the sorted array.
 
-// REPLACE THIS WITH YOUR CODE
+const sortMenuItems = (menuItems) => menuItems.sort((item1,item2) => item1.price - item2.price);
+console.log(sortMenuItems(exampleMenuItems));
 
 /// /////// PROBLEM 14 //////////
 
@@ -307,4 +308,6 @@ const exampleMenuItems = [
 //
 // Make sure to use arrow functions combined with the reduce method.
 
-// REPLACE THIS WITH YOUR CODE
+const productOfArray = (arr) => arr.reduce((a,b) => a*b);
+const items = productOfArray([1,2]);
+console.log(items);
