@@ -191,7 +191,7 @@ getUserById(users, '16t', (user) => {
 // Make sure to use an arrow function.
 // You should not use a for loop, but should use the filter method instead.
 
-const evens = (array) = array.filter((num) => num % 2 === 0);
+const evens = (array) => array.filter((num) => num % 2 === 0);
 
 /// /////// PROBLEM 8 //////////
 
@@ -203,7 +203,7 @@ const evens = (array) = array.filter((num) => num % 2 === 0);
 //
 // Make sure to use an arrow function combined with the filter method (not a for loop).
 
-// REPLACE THIS WITH YOUR CODE
+const startWithLetterA = (array) => (array).filter((str) => str[0].toLowerCase() === 'a');
 
 /// /////// PROBLEM 9 //////////
 
