@@ -228,7 +228,7 @@ console.log(formalGreeting(['steve','bob']));
 // Remember that by default, JavaScript sorts by converting all items to strings. So you
 // will need to provide a compare function.
 
-// REPLACE THIS WITH YOUR CODE
+const sortNumbers =  (arr) => arr.sort((a, b) => a - b);
 
 /// /////// PROBLEM 11 //////////
 
@@ -248,7 +248,10 @@ const employees = [
 ];
 // Do not edit the code above.
 
-// REPLACE THIS WITH YOUR CODE
+const findProgrammer = (employees)=> employees.filter(employee => employee.job === 'programmer')[0];
+const programmers = findProgrammer(employees);
+console.log(programmers);
+
 
 ////////// PROBLEM 12 //////////
 
